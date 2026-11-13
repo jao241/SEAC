@@ -1,0 +1,6 @@
+documentos/aplicacao-referencia
+
+.env
+.venv/
+__pycache__/
+*.pyc
