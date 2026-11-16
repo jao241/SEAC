@@ -1,0 +1,15 @@
+{
+  "servicos": [
+    {"codigo":"ILUMINACAO","nome":"Iluminação de praça","descricao":"Comunicar uma luminária apagada em uma praça fictícia.","requisitos":"Cadastro demonstrativo e localização fictícia."},
+    {"codigo":"ZELADORIA","nome":"Zeladoria de área de lazer","descricao":"Solicitar limpeza de uma área de lazer fictícia.","requisitos":"Cadastro demonstrativo e localização fictícia."},
+    {"codigo":"BIBLIOTECA","nome":"Visita à biblioteca","descricao":"Solicitar uma visita a uma biblioteca fictícia.","requisitos":"Cadastro demonstrativo e unidade fictícia."}
+  ],
+  "faq": [
+    {"pergunta":"O que é o Simplifica Conquista?","resposta":"Este ambiente acadêmico demonstra um assistente de atendimento para serviços fictícios. Você pode consultar serviços, cadastrar um cidadão, registrar uma solicitação e acompanhar um protocolo."},
+    {"pergunta":"Quais são os serviços disponíveis?","resposta":"Os serviços fictícios são Iluminação de praça, Zeladoria de área de lazer e Visita à biblioteca."},
+    {"pergunta":"Como realizar um cadastro?","resposta":"Selecione Cadastro, preencha nome e identificador fictícios, revise os dados e confirme. O cadastro gera um código para abrir solicitações."},
+    {"pergunta":"Como registrar uma solicitação?","resposta":"Selecione Nova solicitação, informe seu código de cadastro, o serviço e uma localização fictícia. Revise os dados e confirme para receber um protocolo."},
+    {"pergunta":"Como consultar o andamento de um protocolo?","resposta":"Selecione Consultar protocolo e informe o código recebido. O atendimento consulta o estado registrado."},
+    {"pergunta":"Qual o prazo de atendimento?","resposta":"Esta demonstração não estabelece prazo para atendimento. Consulte o protocolo para verificar o estado registrado."}
+  ]
+}

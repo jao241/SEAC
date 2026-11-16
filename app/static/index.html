@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Simplifica Conquista | Atendimento</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="shell">
+<aside class="sidebar">
+  <div class="brand"><span class="brand-icon">✳</span><div><strong>Simplifica</strong><small>CONQUISTA</small></div></div>
+  <div class="side-content"><span class="eyebrow">ATENDIMENTO DIGITAL</span><h1>Estamos aqui<br>para <em>ajudar.</em></h1><p>Um espaço para encontrar orientações e acompanhar suas solicitações.</p>
+  <div class="side-rule"></div><span class="eyebrow">COMO POSSO AJUDAR?</span>
+  <button class="side-action" data-action="cadastro"><span>＋</span> Criar cadastro <b>↗</b></button>
+  <button class="side-action" data-action="solicitacao"><span>▤</span> Nova solicitação <b>↗</b></button>
+  <button class="side-action" data-action="consulta"><span>⌕</span> Consultar protocolo <b>↗</b></button></div>
+  <div class="side-footer"><span class="dot"></span> Ambiente de demonstração<br><small>Todos os dados são fictícios.</small></div>
+</aside>
+<main class="main"><header><div><span class="eyebrow">CENTRAL DE ATENDIMENTO</span><h2>Converse com a gente</h2></div><button id="reset" class="reset">↻ <span>Nova conversa</span></button></header>
+<div id="messages" class="messages" aria-live="polite"><div class="welcome" id="welcome"><div class="welcome-icon">✳</div><span class="eyebrow">OLÁ, SEJA BEM-VINDO</span><h3>Como podemos ajudar<br><em>você hoje?</em></h3><p>Tire dúvidas sobre os serviços ou escolha uma das opções para começar.</p><div class="suggestions"><button data-prompt="Quais são os serviços disponíveis?">Conhecer os serviços <span>↗</span></button><button data-prompt="Como funciona o cadastro?">Como fazer um cadastro? <span>↗</span></button><button data-action="consulta">Acompanhar protocolo <span>↗</span></button></div></div></div>
+<div class="composer-wrap"><form id="chat-form" class="composer"><label class="sr-only" for="input">Sua mensagem</label><textarea id="input" rows="1" placeholder="Escreva sua mensagem aqui..." maxlength="2000" required></textarea><button class="send" aria-label="Enviar mensagem">↑</button></form><p>Enter para enviar · Shift + Enter para nova linha · Dados fictícios</p></div></main>
+</div>
+<dialog id="dialog"><form id="action-form"><div class="dialog-head"><div><span class="eyebrow">ATENDIMENTO DEMONSTRATIVO</span><h2 id="dialog-title"></h2></div><button type="button" id="close" class="close" aria-label="Fechar">×</button></div><p class="dialog-note">Utilize somente informações fictícias.</p><div id="fields"></div><div id="review" hidden></div><p id="form-error" class="error" role="alert"></p><div class="dialog-actions"><button type="button" id="cancel" class="secondary">Cancelar</button><button type="submit" id="submit" class="primary">Continuar →</button></div></form></dialog>
+<script src="/static/app.js"></script></body></html>
