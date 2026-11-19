@@ -8,7 +8,7 @@ import unicodedata
 
 from fastmcp import Client
 from google import genai
-from app.dominio import CONHECIMENTO
+from app.conhecimento import CONHECIMENTO
 
 LOG = logging.getLogger(__name__)
 MODELO = os.getenv("GEMINI_ASSISTANT_MODEL", "gemini-3.5-flash-lite")

@@ -9,7 +9,7 @@ from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 from app.assistente import ferramenta, responder
-from app.dominio import CONHECIMENTO, SERVICOS, campo
+from app.conhecimento import CONHECIMENTO, SERVICOS, campo
 
 app = FastAPI(title="Simplifica Conquista")
 app.mount("/static", StaticFiles(directory=Path(__file__).with_name("static")), name="static")

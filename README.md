@@ -1,6 +1,6 @@
 # Simplifica Conquista
 
-Sistema especialista acadêmico para atendimento em um domínio fictício. O chat usa Gemini para orientar sobre serviços. As ações de cadastro, registro e consulta passam por ferramentas MCP e usam SQLite. O cache semântico combina Sentence Transformers e ChromaDB.
+Sistema especialista acadêmico para atendimento em um domínio fictício. O chat usa Gemini para orientar sobre serviços. As ferramentas MCP encaminham cadastro, registro e consulta por HTTP para uma API de domínio, que aplica as regras de atendimento e acessa o SQLite. O cache semântico combina Sentence Transformers e ChromaDB.
 
 ## Iniciar
 
@@ -10,7 +10,7 @@ Sistema especialista acadêmico para atendimento em um domínio fictício. O cha
 2. Execute `docker compose up --build -d`.
 3. Acesse [http://localhost:8080](http://localhost:8080).
 
-Na primeira execução, o modelo de embeddings é baixado para um volume Docker. Os modelos de assistente e julgador podem ser alterados no arquivo `.env`. O servidor MCP permanece na rede interna do Compose.
+Na primeira execução, o modelo de embeddings é baixado para um volume Docker. Os modelos de assistente e julgador podem ser alterados no arquivo `.env`. O servidor MCP e a API de domínio ficam na rede interna do Compose. O volume SQLite é montado no serviço `dominio`.
 
 ## Usar a demonstração
 
@@ -29,4 +29,4 @@ O julgador executa cenários de orientação, avalia as respostas com outro mode
 
 Para parar os serviços, execute `docker compose down`. Os volumes de SQLite, cache e embeddings permanecem. Para reiniciar toda a demonstração e apagar esses dados, execute `docker compose down -v`.
 
-Os serviços, requisitos, cadastros e protocolos são fictícios e a aplicação funciona sem integração municipal.
+Os serviços, requisitos, cadastros e protocolos são fictícios e a aplicação não possui integração com o simplifica conquista.

@@ -1,4 +1,3 @@
-import json
 import os
 import re
 import sqlite3
@@ -6,8 +5,8 @@ from contextlib import closing
 from pathlib import Path
 from uuid import UUID, uuid4
 
-CONHECIMENTO = json.loads(Path(__file__).with_name("conhecimento.json").read_text(encoding="utf-8"))
-SERVICOS = {item["codigo"]: item for item in CONHECIMENTO["servicos"]}
+from app.conhecimento import SERVICOS, campo
+
 DB = os.getenv("DATABASE_PATH", "/data/sqlite/simplifica.db")
 
 
@@ -31,13 +30,6 @@ def iniciar():
             estado TEXT NOT NULL DEFAULT 'Recebida',
             criado_em TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP);
         """)
-
-
-def campo(valor, nome, limite=120):
-    valor = " ".join(valor.strip().split())
-    if not 2 <= len(valor) <= limite:
-        raise ValueError(f"Informe {nome} com 2 a {limite} caracteres.")
-    return valor
 
 
 def cadastrar(nome, identificador):

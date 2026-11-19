@@ -1,12 +1,27 @@
 name: simplifica-conquista
 services:
+  dominio:
+    image: simplifica-conquista:local
+    build: .
+    command: ["uvicorn", "app.api_dominio:app", "--host", "0.0.0.0", "--port", "8001"]
+    networks: [interno]
+    volumes:
+      - sqlite:/data/sqlite
+    healthcheck:
+      test: ["CMD", "python", "-c", "from urllib.request import urlopen; urlopen('http://127.0.0.1:8001/health', timeout=2)"]
+      interval: 5s
+      timeout: 3s
+      retries: 12
   mcp:
     image: simplifica-conquista:local
     build: .
     command: ["python", "-m", "app.mcp"]
+    environment:
+      DOMINIO_URL: http://dominio:8001
     networks: [interno]
-    volumes:
-      - sqlite:/data/sqlite
+    depends_on:
+      dominio:
+        condition: service_healthy
     healthcheck:
       test: ["CMD", "python", "-c", "from urllib.request import urlopen; urlopen('http://127.0.0.1:8000/health', timeout=2)"]
       interval: 5s

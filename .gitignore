@@ -1,6 +1,8 @@
-documentos/aplicacao-referencia
+documentos/
 
 .env
 .venv/
 __pycache__/
 *.pyc
+
+Livro SE.zip
