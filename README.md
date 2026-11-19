@@ -1,4 +1,4 @@
-# Simplifica Conquista
+# ChatBot inspirado no Simplifica Conquista
 
 Sistema especialista acadêmico para atendimento em um domínio fictício. O chat usa Gemini para orientar sobre serviços. As ferramentas MCP encaminham cadastro, registro e consulta por HTTP para uma API de domínio, que aplica as regras de atendimento e acessa o SQLite. O cache semântico combina Sentence Transformers e ChromaDB.
 
